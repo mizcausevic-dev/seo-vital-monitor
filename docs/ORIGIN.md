@@ -20,5 +20,5 @@ The goal was to show that SEO performance integrity belongs in the same conversa
 
 It also reinforces the broader public story:
 
-- Director of Web & GTM Systems
+- Boston Enterprise Technologist
 - Pipeline Scaling & Threat Mitigation
