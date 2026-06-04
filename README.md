@@ -1,6 +1,9 @@
 # SEO Vital Monitor
 
-TypeScript control plane for Core Web Vitals, Lighthouse regressions, and route-level SEO performance drift.
+Board-ready Kinetic Gain surface for Core Web Vitals, Lighthouse regressions, and route-level SEO performance drift.
+
+- Live: [http://vitals.kineticgain.com/](http://vitals.kineticgain.com/)
+- Repo: [https://github.com/mizcausevic-dev/seo-vital-monitor](https://github.com/mizcausevic-dev/seo-vital-monitor)
 
 ## Why this exists
 
@@ -11,6 +14,13 @@ SEO performance decay is often treated like a slow analytics problem after the d
 - organic acquisition weakens before growth teams know which deploy caused it
 
 `seo-vital-monitor` turns route-level performance drift into an acquisition-readable control plane before Core Web Vitals degradation becomes a search and conversion problem.
+
+## What it includes
+
+- TypeScript control plane for Core Web Vitals, Lighthouse SEO, and route-level release regressions
+- synthetic vitals lane covering pricing, docs, blog, and demand-entry routes
+- reusable outputs for route risk, acquisition loss, regression posture, and release ownership
+- prerendered static site, JSON payloads, screenshots, and docs
 
 ## Routes
 
@@ -52,10 +62,8 @@ Open:
 
 ## Validation
 
-- `npm run build`
-- `npm run test`
-- `npm run demo`
-- `npm run smoke`
+- `npm run verify`
+- `npm run prerender`
 - `npm run render:assets`
 
 ## Docs
