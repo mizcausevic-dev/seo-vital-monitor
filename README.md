@@ -15,6 +15,18 @@ SEO performance decay is often treated like a slow analytics problem after the d
 
 `seo-vital-monitor` turns route-level performance drift into an acquisition-readable control plane before Core Web Vitals degradation becomes a search and conversion problem.
 
+## What this product does
+
+SEO Vital Monitor turns Core Web Vitals, Lighthouse SEO, route regressions, organic sensitivity, and release ownership into one acquisition-risk surface. It connects route, release, LCP, CLS, INP, Lighthouse SEO, organic share, estimated loss, and remediation priority in one operating view.
+
+For a SaaS go-to-market analyst, the product answers which pages threaten inbound velocity, which regressions are likely to reduce conversion quality, and where growth and engineering should focus before search performance drops into a lagging dashboard.
+
+For a SaaS value architect, it exposes where revenue leaks: slow pages, ranking-sensitive routes, poor release comparisons, invisible vitals drift, and technical regressions that force paid and organic demand to work harder than necessary.
+
+For technical reviewers, the repo includes static routes, API-style outputs, seeded vitals data, route-level regression records, verification checks, prerendered pages, smoke tests, and screenshot generation. It is meant to demonstrate an inspectable operator surface, not a keyword-only landing page.
+
+This follows the broader Kinetic Gain pattern: every surface keeps owner, signal, model, risk, value, route, and verification visible together so non-technical and technical readers can understand what the system does and why it matters.
+
 ## What it includes
 
 - TypeScript control plane for Core Web Vitals, Lighthouse SEO, and route-level release regressions

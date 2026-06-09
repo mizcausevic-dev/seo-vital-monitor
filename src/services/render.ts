@@ -128,6 +128,39 @@ function layout(title: string, activePath: string, body: string) {
 </html>`;
 }
 
+function renderProductDepth() {
+  return `
+    <section class="section">
+      <div class="cols-2">
+        <article class="panel">
+          <p class="eyebrow">Product depth</p>
+          <h2 class="section-title">What this product does</h2>
+          <p class="section-copy">SEO Vital Monitor turns Core Web Vitals, Lighthouse SEO, route regressions, organic sensitivity, and release ownership into one acquisition-risk surface. Non-technical leaders see which pages threaten pipeline. Technical teams see the metric, route, release, and regression evidence behind the recommendation.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">GTM analyst lens</p>
+          <h2 class="section-title">Where growth teams use it</h2>
+          <p class="section-copy">Use it to prioritize pricing, docs, blog, and demand-entry routes by acquisition risk instead of treating performance as an engineering-only score. It shows where a release is likely to reduce discoverability, conversion quality, or inbound velocity.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Value architecture</p>
+          <h2 class="section-title">Where revenue leaks</h2>
+          <p class="section-copy">The system surfaces leakage from slow pages, ranking-sensitive routes, poor release comparisons, invisible vitals drift, and technical regressions that make paid and organic demand work harder than necessary.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Technical proof</p>
+          <h2 class="section-title">What is inspectable</h2>
+          <p class="section-copy">Static routes, API-style outputs, seeded vitals data, route-level regressions, verification checks, prerendering, tests, smoke checks, and screenshot generation keep this as a real operator surface rather than generic SEO copy.</p>
+        </article>
+      </div>
+      <article class="panel">
+        <p class="eyebrow">Portfolio pattern</p>
+        <h2 class="section-title">What these repos have in common</h2>
+        <p class="section-copy">Each Kinetic Gain surface converts operational evidence into board-readable decisions: owner, signal, model, risk, value, route, and verification stay visible together.</p>
+      </article>
+    </section>`;
+}
+
 export function renderOverview() {
   const stats = summary();
   const regressionMarkup = regressions()
@@ -212,7 +245,7 @@ export function renderOverview() {
       </article>
     </section>`;
 
-  return layout("SEO Vital Monitor", "/", body);
+  return layout("SEO Vital Monitor", "/", `${body}${renderProductDepth()}`);
 }
 
 export function renderVitalsLane() {
@@ -347,7 +380,8 @@ export function renderDocs() {
           </ul>
         </article>
       </div>
-    </section>`;
+    </section>
+    ${renderProductDepth()}`;
 
   return layout("SEO Vital Monitor - Docs", "/docs", body);
 }
