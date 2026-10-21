@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { renderOverview, renderRegressions, renderVitalsLane } from "./services/render";
 import { payload, regressions, summary, vitalLane } from "./services/seoVitalService";
 
 describe("seo-vital-monitor", () => {
@@ -14,6 +15,18 @@ describe("seo-vital-monitor", () => {
   it("vitals and regressions stay commercially legible", () => {
     expect(vitalLane().length).toBeGreaterThan(1);
     expect(regressions().some((item) => item.route.includes("pricing"))).toBe(true);
+  });
+
+  it("renders the ledger instead of the chip dashboard", () => {
+    const overview = renderOverview();
+
+    expect(overview).toContain("binder");
+    expect(overview).toContain("caliper");
+    expect(overview).toContain("slip");
+    expect(overview).toContain("/pricing");
+    expect(overview).not.toContain("nav-chip");
+    expect(renderVitalsLane()).toContain("tally");
+    expect(renderRegressions()).toContain("Tear off");
   });
 
   it("payload bundles the full surface", () => {
